@@ -1,3 +1,3 @@
-# Gravitycraft-Thumbnail
+# Gravitycraft-KeyVisual
 
-反重力レースゲームのサムネイル
+反重力レースゲームのキービジュアル
