@@ -1,0 +1,50 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <!-- 文字のグロー（発光）効果 -->
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="15" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        
+        <!-- 背景のグラデーションオーバーレイ -->
+        <linearGradient id="bottomShadow" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="rgba(0,0,0,0)" />
+            <stop offset="100%" stop-color="rgba(0,0,0,0.8)" />
+        </linearGradient>
+
+        <linearGradient id="textGradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="100%" stop-color="#A0E9FF" />
+        </linearGradient>
+    </defs>
+
+    <!-- 背景画像 (中央から少し左へ移動) -->
+    <image xlink:href="screenshot.png" x="-520" y="0" width="1920" height="1080" />
+
+    <!-- 下部のシャドウオーバーレイ -->
+    <rect x="0" y="540" width="1080" height="540" fill="url(#bottomShadow)" />
+
+    <!-- HUD風コーナーエレメント -->
+    <g stroke="#00F2FF" stroke-width="4" fill="none" opacity="0.7">
+        <!-- 左上 -->
+        <path d="M 40 100 L 40 40 L 100 40" />
+        <!-- 右上 -->
+        <path d="M 980 40 L 1040 40 L 1040 100" />
+        <!-- 左下 -->
+        <path d="M 40 980 L 40 1040 L 100 1040" />
+        <!-- 右下 -->
+        <path d="M 980 1040 L 1040 1040 L 1040 980" />
+    </g>
+
+    <!-- メインタイトル -->
+    <g filter="url(#glow)">
+        <text x="540" y="850" font-family="Arial Black, sans-serif" font-size="110" font-weight="900" fill="url(#textGradient)" text-anchor="middle" letter-spacing="6">
+            GRAVITYCRAFT
+        </text>
+    </g>
+
+    <!-- サブタイトル -->
+    <text x="540" y="910" font-family="Arial, sans-serif" font-size="28" font-weight="300" fill="#00F2FF" text-anchor="middle" letter-spacing="15" opacity="0.9">
+        ANTI-GRAVITY RACING
+    </text>
+</svg>
